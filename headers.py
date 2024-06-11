@@ -31,12 +31,14 @@ def create_application() -> FastAPI:
     fastapi_app.include_router(GoK.router, prefix="/GoK", tags=["KYC_Verification"])
     fastapi_app.include_router(risk.router, prefix="/smis", tags=["empty"])
     fastapi_app.include_router(cover.router, prefix="/cover", tags=["cover"])
+    fastapi_app.include_router(charge.router, prefix="/charge", tags=["charge"])
 
     return fastapi_app
 
 
 app = create_application()
 app.add_middleware(SecurityHeadersMiddleware)
+<<<<<<< HEAD
 
 
 # Login credentials
@@ -45,3 +47,5 @@ default_login_credentials = LoginRequest(
     password="Som3rAnDomp@$sw0rd!!",
     user_id="27A46867-9E03-4122-AB6D-DFB10654403F"
 )
+=======
+>>>>>>> 9dad1fb2acc622f03e5061e6f34ea6b29cf31adb
