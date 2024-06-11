@@ -37,3 +37,11 @@ def create_application() -> FastAPI:
 
 app = create_application()
 app.add_middleware(SecurityHeadersMiddleware)
+
+
+# Login credentials
+default_login_credentials = LoginRequest(
+    email="test@allianz.com",
+    password="Som3rAnDomp@$sw0rd!!",
+    user_id="27A46867-9E03-4122-AB6D-DFB10654403F"
+)
