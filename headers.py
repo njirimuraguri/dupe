@@ -31,6 +31,7 @@ def create_application() -> FastAPI:
     fastapi_app.include_router(GoK.router, prefix="/GoK", tags=["KYC_Verification"])
     fastapi_app.include_router(risk.router, prefix="/smis", tags=["empty"])
     fastapi_app.include_router(cover.router, prefix="/cover", tags=["cover"])
+    fastapi_app.include_router(charge.router, prefix="/charge", tags=["charge"])
 
     return fastapi_app
 
